@@ -11,6 +11,7 @@ var fullPrice = (function (){
 if(document.getElementById('sns-base-price')){
 		var getPrice = document.getElementById('sns-base-price').innerHTML;
 	return getPrice; 
+	//variable getPRICE *****
 } 
 else if (document.getElementById('a-offscreen')){
 	var getPrice = document.getElementById('a-offscreen').innerHTML;
@@ -170,6 +171,7 @@ chrome.runtime.onMessage.addListener(function(message, sender, response){
 	if((message.from === 'popup') && (message.subject === 'getData')){
 		var objson = {
 		title:	document.getElementById("productTitle").innerText,
+			//title  variable ****
 		price: fullPrice,
 		reviews: reviewNo,
 		asin: asinNo,
