@@ -21,6 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
             const electronicsRating = document.getElementById('electronics').value;
             const budget = document.getElementById('budget').value;
 
+            localStorage.setItem('exerciseRating', exerciseRating);
+            localStorage.setItem('dietRating', dietRating);
+            localStorage.setItem('personalCareRating', personalCareRating);
+            localStorage.setItem('clothesRating', clothesRating);
+            localStorage.setItem('entertainmentRating', entertainmentRating);
+            localStorage.setItem('electronicsRating', electronicsRating);
+            localStorage.setItem('budget', budget);
+
             // Update the values in the DOM
             document.getElementById('exerciseRating').textContent = exerciseRating;
             document.getElementById('dietRating').textContent = dietRating;
@@ -47,10 +55,48 @@ document.addEventListener('DOMContentLoaded', function () {
         // Show the collected values
         const collectedValues = document.getElementById('collectedValues');
         collectedValues.style.display = 'block';
+
+        populateCollectedValues();
+    }
+
+    function populateCollectedValues() {
+        // Retrieve saved survey values from local storage
+        const exerciseRating = localStorage.getItem('exerciseRating');
+        const dietRating = localStorage.getItem('dietRating');
+        const personalCareRating = localStorage.getItem('personalCareRating');
+        const clothesRating = localStorage.getItem('clothesRating');
+        const entertainmentRating = localStorage.getItem('entertainmentRating');
+        const electronicsRating = localStorage.getItem('electronicsRating');
+        const budget = localStorage.getItem('budget');
+
+        // Update the values in the DOM
+        document.getElementById('exerciseRating').textContent = `Exercise Rating: ${exerciseRating}`;
+        document.getElementById('dietRating').textContent = `Diet Rating: ${dietRating}`;
+        document.getElementById('personalCareRating').textContent = `Personal Care Rating: ${personalCareRating}`;
+        document.getElementById('clothesRating').textContent = `Clothes Rating: ${clothesRating}`;
+        document.getElementById('entertainmentRating').textContent = `Entertainment Rating: ${entertainmentRating}`;
+        document.getElementById('electronicsRating').textContent = `Electronics Rating: ${electronicsRating}`;
+        document.getElementById('budgetValue').textContent = `${budget}`;
     }
 
     // ... (rest of your code, including the random score, product extraction, etc.)
-    const randomScore = Math.floor(Math.random() * 5) + 1;
+    // Calculate the score and set the color accordingly
+    const randomScore = Math.floor(Math.random() * 10) + 1; // Generate a random score between 1 and 10
+    let color;
+
+    if (randomScore <= 4) {
+        color = 'red'; // Scores 1-4 are red
+    } else if (randomScore <= 7) {
+        color = 'yellow'; // Scores 5-7 are yellow
+    } else {
+        color = 'green'; // Scores 8-10 are green
+    }
+
+    // Set the score and its color
+    const scoreElement = document.getElementById('score');
+    scoreElement.textContent = `Score: ${randomScore}`;
+    scoreElement.style.color = color; // Set the color based on the score
+
     document.getElementById('score').textContent = `Score: ${randomScore}`;
 
     function addProductToList(productName, productPrice) {
