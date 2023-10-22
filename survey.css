@@ -1,0 +1,52 @@
+/* Style the body */
+body {
+    width: 400px;
+    padding: 20px;
+    font-family: "Gill Sans", "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 13px;
+    background-color: lightgreen;
+}
+
+/* Style the survey form container */
+#surveyForm {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Style the header */
+h3 {
+    text-align: center;
+}
+
+/* Style labels */
+label {
+    font-weight: bold;
+}
+
+/* Style input fields */
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    background-color: lightgreen;
+    transition: background-color 0.2s;
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Hover effect for input fields */
+input[type="number"]:hover {
+    background-color: #8CC63F;
+}
+
+/* Style the submit button */
+#submitButton {
+    background-color: #555555;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Add more CSS rules to style other elements as needed */

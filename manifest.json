@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Amazon Harvest",
-  "description": "Collects information about products from detail pages on Amazon. Collects: Title, Customer Review No., Price, ASIN, Rank, UPC.",
-  "version": "1.1.9",
+  "name": "Budget Consultant",
+  "description": "Empowering users to smartly budget and reflect on their online shopping habits ",
+  "version": "1.2.0",
   
   "action": {
     "default_popup": "survey.html",
