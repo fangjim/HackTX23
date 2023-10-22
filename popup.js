@@ -79,6 +79,36 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('budgetValue').textContent = `${budget}`;
     }
 
+    //The following is completely unverfied and probably definitely doesn't work
+    // Prepare the message with 9 inputs
+    // const message = {
+    //     exerciseRating: exerciseRating,
+    //     dietRating: dietRating,
+    //     personalCareRating: personalCareRating,
+    //     clothesRating: clothesRating,
+    //     entertainmentRating: entertainmentRating,
+    //     electronicsRating: electronicsRating,
+    //     budget: budget,
+    //     productName: productName,
+    //     productPrice: productPrice
+    // };
+
+    // // Send the message to the native application (main.py)
+    // chrome.runtime.sendNativeMessage('com.example.nativeapp', message, function (response) {
+    //     if (chrome.runtime.lastError) {
+    //         // Handle any error that occurs during communication
+    //     } else {
+    //     // Update the score with the result received from the native application
+    //         const score = response.score;
+    //         document.getElementById('score').textContent = `Score: ${score}`;
+    //     }
+    // });  
+    // ////////////////////////////
+
+
+
+
+
     // ... (rest of your code, including the random score, product extraction, etc.)
     // Calculate the score and set the color accordingly
     const randomScore = Math.floor(Math.random() * 10) + 1; // Generate a random score between 1 and 10
